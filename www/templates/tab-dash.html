@@ -1,0 +1,21 @@
+<ion-view view-title="My Fridge" class="row-center">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-plus"  
+        ng-click="loadScanner()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content id="fridge" class="padding">
+  <ion-list  
+      show-delete="shouldShowDelete"
+      on-swipe="swiped()"
+      can-swipe="listCanSwipe">
+    <ion-item
+      ng-repeat="item in FridgeArray"
+      ng-click="showDetails(item.itemdescription)">
+      {{item.itemname}} {{item.description}}
+      <ion-delete-button class="ion-minus-circled" ng-click="deleteItem(item.description)">
+      </ion-delete-button>
+    </ion-item>
+  </ion-list>
+  </ion-content>
+</ion-view>

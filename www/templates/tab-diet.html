@@ -1,0 +1,15 @@
+<ion-view view-title="My Fridge">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-plus"  
+        ng-click="loadScanner()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+  <ion-list  
+      show-delete="shouldShowDelete"
+      on-swipe="swiped()"
+      can-swipe="listCanSwipe">
+
+  </ion-list>
+  </ion-content>
+</ion-view>
